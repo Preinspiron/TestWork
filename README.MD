@@ -1,6 +1,6 @@
 ## This work wath providet by official Vite v.4.3.9 react template
 
-Extra added:  React + Redux +Route + Mui + RTQ Query + ESLint + Prettier
+Extra added:  React +Redux +Route +Mui +RTQ Query +ESLint +Prettier +React-select +CSR +HMR +PropTypes + Sass +Styled
 
 
 
@@ -49,7 +49,7 @@ Example: '@/components/Counter/Counter';
 
 
 ### Backend (mockapi)
- Cards sorted(b-a) by tweets
+ Cards sorted(b-a) by tweets at:
 ```
 https://6465e051228bd07b355516e4.mockapi.io
 ```
@@ -57,5 +57,12 @@ https://6465e051228bd07b355516e4.mockapi.io
 ### Contacts
 
 ```
-preinspiron@gmail.com
+preinspiron@gmail.com 
 ```
+
+### CSR for GitHub was resolved by this [issui](https://github.com/rafgraph/spa-github-pages)
+
+
+### Dedploy 
+- Actions
+- GH-pagaes (npm run deploy)
