@@ -7,7 +7,6 @@ const Layout = () => {
   return (
     <>
       <Container maxWidth="1280px">
-        r
         <nav className={s.nav}>
           <Link to="/">
             <Button variant="outlined">HOME</Button>
