@@ -12,9 +12,7 @@ const Layout = () => {
             <Button variant="outlined">HOME</Button>
           </Link>
           <Link to="/tweets">
-            <Button variant="outlined" state={{ from: location }}>
-              TWEETS
-            </Button>
+            <Button variant="outlined">TWEETS</Button>
           </Link>
         </nav>
         <Outlet />
