@@ -9,7 +9,7 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter basename="/vite3-react-redux/">
+      <BrowserRouter basename="/TestWork/">
         <App />
       </BrowserRouter>
     </PersistGate>
