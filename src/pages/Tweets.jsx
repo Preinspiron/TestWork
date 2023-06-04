@@ -19,7 +19,7 @@ const Tweets = () => {
   // useEffect(() => setSearchParams({ filter: 'all' }), []);
   // const name = searchParams.get("filter") ?? "";
   const filterName = searchParams.get('filter') ?? 'all';
-  console.log(filterName);
+
   useEffect(() => {
     setSearchParams({ filter: filterName });
   }, []);
@@ -43,12 +43,7 @@ const Tweets = () => {
                 tweets={user.tweets}
               />
             ))}
-        {filterName === 'followings' &&
-          Notify.info(
-            `You have a ${
-              data.filter((user) => idies.includes(user.id)).length
-            } followings`,
-          )}
+
         {filterName === 'follow' &&
           data
             .filter((user) => !idies.includes(user.id))
@@ -61,12 +56,7 @@ const Tweets = () => {
                 tweets={user.tweets}
               />
             ))}
-        {filterName === 'follow' &&
-          Notify.info(
-            `You have a ${
-              data.filter((user) => !idies.includes(user.id)).length
-            } tweets to follow`,
-          )}
+
         {filterName === 'all' &&
           data.map((user) => (
             <Tweet
@@ -77,8 +67,6 @@ const Tweets = () => {
               tweets={user.tweets}
             />
           ))}
-        {filterName === 'all' &&
-          Notify.info(`You have a ${data.length} tweets`)}
       </ul>
     </div>
   );

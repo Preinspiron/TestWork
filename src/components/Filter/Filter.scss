@@ -1,54 +1,48 @@
 .filter-container {
   width: 100%;
-  .filter__control {
-    // Styles for the control component
-    background-color: rgb(126, 89, 211);
-    border: 2px solid transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  margin-bottom: 30px;
+  // .filter__control {
+  //   // Styles for the control component
 
-    &:hover {
-      border-color: rgb(94, 65, 163);
-    }
-
-    &--is-focused {
-      border-color: rgb(94, 65, 163);
-    }
-  }
-  .filter__single-value {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: #ebd8ff;
-  }
-  .filter__menu {
-    background-color: rgb(126, 89, 211);
-  }
-  .filter__option {
-    // Styles for the option component
-    background-color: rgb(126, 89, 211);
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: #ebd8ff;
-    cursor: pointer;
-
-    &:hover {
-      background-color: rgba(113, 232, 188, 0.715);
-    }
-
-    &--is-selected {
-      background-color: rgba(92, 211, 168, 1);
-      color: white;
-    }
-  }
-
-  // Add other styles for different child components as needed
+  //   border: 2px solid transparent;
+  //   border-radius: 8px;
+  //   cursor: pointer;
+  //   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  // }
 }
+//   .filter__single-value {
+//     font-family: 'Montserrat';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 15px;
+//     line-height: 1.2;
+//     text-transform: uppercase;
+//     color: #ebd8ff;
+//   }
+//   .filter__menu {
+//     background-color: transparent;
+//   }
+//   .filter__option {
+//     // Styles for the option component
+//     background-color: transparent;
+//     font-family: 'Montserrat';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 15px;
+//     line-height: 1.2;
+//     text-transform: uppercase;
+//     color: #ebd8ff;
+//     cursor: pointer;
+
+//     &:hover {
+//       background-color: rgba(113, 232, 188, 0.715);
+//     }
+
+//     &--is-selected {
+//       background-color: rgba(92, 211, 168, 1);
+//       color: white;
+//     }
+//   }
+
+//   // Add other styles for different child components as needed
+// }
