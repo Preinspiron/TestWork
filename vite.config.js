@@ -18,7 +18,7 @@ export default defineConfig({
     },
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".scss", ".css"],
   },
-  base: "/TestWork/",
+  base: "./",
   // build: {
   //   rollupOptions: {
   //     input: {
