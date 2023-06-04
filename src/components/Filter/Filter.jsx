@@ -22,12 +22,13 @@ const Filter = ({ change, urlValue }) => {
   return (
     <Select
       defaultValue={filterOptions[0]}
+      closeMenuOnSelect={false}
       className="filter-container"
       styles={{
-        singleValue: (base) => ({ ...base, color: 'white', fontSize: '16px' }),
+        singleValue: (base) => ({ ...base, color: 'black', fontSize: '16px' }),
         valueContainer: (base) => ({
           ...base,
-          background: colourOptions[1].color,
+          // background: colourOptions[1].color,
           color: 'white',
           width: '100%',
         }),
@@ -35,8 +36,8 @@ const Filter = ({ change, urlValue }) => {
       options={filterOptions}
       value={filterOptions.find((el) => el.value === urlValue)}
       onChange={(e) => change(e.value)}
-      isSearchable
-      isClearable
+      // isSearchable
+      // isClearable
     />
   );
 };
