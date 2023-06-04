@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, createBrowserRouter } from 'react-router-dom';
 import Home from '../pages/Home';
 import Tweets from '../pages/Tweets';
 
@@ -13,7 +13,7 @@ function Routing() {
     <Routes>
       <Route path="/*" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="tweets" element={<Tweets />} />
+        <Route path="/tweets" element={<Tweets />} />
         {/* <Route path="tweets/:filter" element={<Tweet />} /> */}
       </Route>
       <Route path="*" element={<_404 />}></Route>
