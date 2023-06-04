@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import s from './Tweet.module.scss';
-
+import { Dna, FallingLines, ThreeDots } from 'react-loader-spinner';
 import PropTypes from 'prop-types';
 import logo from '../../images/Vector.png';
 import dialog from '../../images/question.png';
@@ -31,10 +31,13 @@ const Tweet = ({
   const selectFollowings = useSelector((state) => state.followers.follows);
   const checker = selectFollowings.some((item) => item?.id === id);
   const [isFollowing, setIsFollowing] = useState(checker);
-  const [putUser, { isSuccess }] = usePutUserMutation();
+  const [putUser, { isSuccess, isLoading }] = usePutUserMutation();
   const dispatch = useDispatch();
 
-  const handleButtonClick = (id, followers) => {
+  const handleButtonClick = (id, followers, e) => {
+    // isSuccess ? (e.target.disable = true) : '';
+    e.target.disabled = false;
+    // console.log(e.target);
     !isFollowing && dispatch(setFollow(id));
     isFollowing && dispatch(removeFollow(id));
     putUser({
@@ -42,13 +45,14 @@ const Tweet = ({
       followers: isFollowing ? followers - 1 : followers + 1,
     }).unwrap();
     setIsFollowing(!isFollowing);
+    // console.log(isSuccess);
+    console.log(isLoading);
   };
 
   const buttonStyle = {
     backgroundColor: checker ? '#5CD3A8' : '#EBD8FF',
+    position: 'relative',
   };
-
-  // притянуть селектор, который проверяет флаг из ектив и передает по условию класс в кнопку ниже
 
   return (
     <li id={id} className={s.wrapper}>
@@ -70,10 +74,33 @@ const Tweet = ({
       <button
         type="button"
         className={s.button}
-        onClick={() => handleButtonClick(id, followers)}
+        onClick={(e) => handleButtonClick(id, followers, e)}
         style={buttonStyle}
+        disabled={isLoading && !isSuccess}
       >
         {isFollowing ? 'FOLLOWING' : 'FOLLOW'}
+        {isLoading && (
+          <ThreeDots
+            visible={true}
+            // height="80"
+            // width="80"
+            ariaLabel="dna-loading"
+            wrapperStyle={{
+              position: 'absolute',
+              top: '0',
+              left: '0',
+              radius: '5',
+              // width: '60',
+              // height: '60',
+              transform: 'translate(70% , -25%)',
+              // marginLeft: 'auto',
+              // marginRigth: '',
+              padding: '0',
+              margin: '0',
+            }}
+            wrapperClass="dna-wrapper"
+          />
+        )}
       </button>
     </li>
   );
