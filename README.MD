@@ -1,31 +1,31 @@
-## viterjs-template
+## This work wath providet by official Vite v.4.3.9 react template
 
-JavaScript + React + Redux + Mui + Axios + ESLint + Prettier
+Extra added:  React + Redux +Route + Mui + RTQ Query + ESLint + Prettier
 
-![viterjs-template](https://iili.io/yYpGaV.md.png)
+
 
 ### Getting Started
 
 #### Clone the repo
 
 ```
-npx degit emre-cil/viterjs-template my-app
+git clone https://github.com/Preinspiron/TestWork.git
 ```
 
 ```
-cd my-app1
+cd TestWork
 ```
 
 #### Install Dependencies
 
 ```
-pnpm install
+npm install
 ```
 
 #### Run
 
 ```
-pnpm dev
+npm run dev
 ```
 
 #### Paths
@@ -33,40 +33,29 @@ pnpm dev
 Application using absolute paths
 Example: '@/components/Counter/Counter';
 
-if you don't want to use you can remove these lines from
 
-> vite.config.js
-
-```
- resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
-  },
-```
-
-> jsconfig.json
-
-```
-"paths": {
-      "@/*": ["./*"]
-    }
-```
 
 ### Scripts
 
 | Script        | Description                        |
 | ------------- | ---------------------------------- |
-| pnpm dev      | Runs the application.              |
-| pnpm build    | Create builds for the application. |
-| pnpm preview  | Runs the Vite preview              |
-| pnpm lint     | Display eslint errors              |
-| pnpm lint:fix | Fix the eslint errors              |
-| pnpm format   | Runs prettier for all files        |
-| pnpm test     | Run tests                          |
+| npm run dev   | Runs the application.              |
+| npm build     | Create builds to ./dist            |
+| npm preview   | Runs the Vite preview              |
+| npm lint      | Display eslint errors              |
+| npm lint:fix  | Fix the eslint errors              |
+| npm format    | Runs prettier for all files        |
+| npm test      | Run tests                          |
 
-### Check List
 
-````
- Save
+### Backend (mockapi)
+ Cards sorted(b-a) by tweets
+```
+https://6465e051228bd07b355516e4.mockapi.io
+```
+
+### Contacts
+
+```
+preinspiron@gmail.com
+```
