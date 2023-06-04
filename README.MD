@@ -49,6 +49,7 @@ Example: '@/components/Counter/Counter';
 
 
 ### Backend (mockapi)
+
  Cards sorted(b-a) by tweets at:
 ```
 https://6465e051228bd07b355516e4.mockapi.io
@@ -64,5 +65,6 @@ preinspiron@gmail.com
 
 
 ### Dedploy 
+
 - Actions
 - GH-pagaes (npm run deploy)
