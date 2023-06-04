@@ -1,13 +1,12 @@
-import { Outlet, Link, useLocation, useSearchParams } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import s from './Layout.module.scss';
-import { Container } from '@mui/material';
-import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { Outlet, Link, useLocation, useSearchParams } from "react-router-dom";
+import Button from "@mui/material/Button";
+import s from "./Layout.module.scss";
+import { Container } from "@mui/material";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 const Layout = () => {
-  // const location = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const current = searchParams.get('filter');
-  current && console.log('current');
+  const [searchParams] = useSearchParams();
+  const current = searchParams.get("filter");
+
   return (
     <>
       <Container maxWidth="1280px">

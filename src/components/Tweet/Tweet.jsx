@@ -1,21 +1,22 @@
-import { useState } from 'react';
-import s from './Tweet.module.scss';
-import { Dna, FallingLines, ThreeDots } from 'react-loader-spinner';
-import PropTypes from 'prop-types';
-import logo from '../../images/Vector.png';
-import dialog from '../../images/question.png';
-import ring from '../../images/borderRing.png';
-import bar from '../../images/bar.png';
-import { usePutUserMutation } from '@/api/store';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFollow, removeFollow } from '@/api/slice';
+import { useState } from "react";
+import s from "./Tweet.module.scss";
+import { Dna, FallingLines, ThreeDots } from "react-loader-spinner";
+import PropTypes from "prop-types";
+import logo from "../../images/Vector.png";
+import dialog from "../../images/question.png";
+import ring from "../../images/borderRing.png";
+import bar from "../../images/bar.png";
+import { usePutUserMutation } from "@/api/store";
+import { useDispatch, useSelector } from "react-redux";
+import { setFollow, removeFollow } from "@/api/slice";
+import boy from "@/images/boy.png";
 
 const format = (value) => {
-  const form = new Intl.NumberFormat('en', {
-    style: 'decimal',
+  const form = new Intl.NumberFormat("en", {
+    style: "decimal",
 
     // minimumFractionDigits: 2,
-    useGrouping: 'false',
+    useGrouping: "false",
   }).format(value);
   // .replace(" ", ",");
   // form.substring(0, 1) + " " + form.substring(1);
@@ -27,6 +28,7 @@ const Tweet = ({
   avatar = null,
   followers = null,
   tweets = null,
+  isFetching,
 }) => {
   const selectFollowings = useSelector((state) => state.followers.follows);
   const checker = selectFollowings.some((item) => item?.id === id);
@@ -50,8 +52,8 @@ const Tweet = ({
   };
 
   const buttonStyle = {
-    backgroundColor: checker ? '#5CD3A8' : '#EBD8FF',
-    position: 'relative',
+    backgroundColor: checker ? "#5CD3A8" : "#EBD8FF",
+    position: "relative",
   };
 
   return (
@@ -68,7 +70,12 @@ const Tweet = ({
       <div className={s.bg_ring}>
         <img src={ring} alt="background ring" />
       </div>
-      <img loading="lazy" src={avatar} alt="avatar" className={s.avatar} />
+      <img
+        loading="lazy"
+        src={isFetching ? boy : avatar}
+        alt="avatar"
+        className={s.avatar}
+      />
       <p className={s.tweets}>{format(tweets)} Tweets</p>
       <p className={s.followers}>{format(followers)} Followers</p>
       <button
@@ -78,7 +85,7 @@ const Tweet = ({
         style={buttonStyle}
         disabled={isLoading && !isSuccess}
       >
-        {isFollowing ? 'FOLLOWING' : 'FOLLOW'}
+        {isFollowing ? "FOLLOWING" : "FOLLOW"}
         {isLoading && (
           <ThreeDots
             visible={true}
@@ -86,17 +93,17 @@ const Tweet = ({
             // width="80"
             ariaLabel="dna-loading"
             wrapperStyle={{
-              position: 'absolute',
-              top: '0',
-              left: '0',
-              radius: '5',
+              position: "absolute",
+              top: "0",
+              left: "0",
+              radius: "5",
               // width: '60',
               // height: '60',
-              transform: 'translate(70% , -25%)',
+              transform: "translate(70% , -25%)",
               // marginLeft: 'auto',
               // marginRigth: '',
-              padding: '0',
-              margin: '0',
+              padding: "0",
+              margin: "0",
             }}
             wrapperClass="dna-wrapper"
           />
@@ -113,4 +120,5 @@ Tweet.propTypes = {
   avatar: PropTypes.string,
   followers: PropTypes.number,
   tweets: PropTypes.number,
+  isFetching: PropTypes.bool,
 };

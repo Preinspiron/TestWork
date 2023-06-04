@@ -4,21 +4,20 @@
   align-items: center;
   gap: 20px;
   width: 100%;
-
 }
 
 .tweets_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   list-style-type: none;
   gap: 20px;
 
   @media screen and (min-width: 768px) {
-    gap: 26px;
+    // gap: 26px;
   }
   @media screen and (min-width: 1200px) {
-    gap: 38px;
+    // gap: 38px;
   }
 }
