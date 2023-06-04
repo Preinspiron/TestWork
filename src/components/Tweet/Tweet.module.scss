@@ -1,0 +1,133 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: all 250ms;
+  width: 380px;
+  padding-top: 214px;
+  width: 100%;
+  padding-bottom: 36px;
+  background: linear-gradient(
+    114.99deg,
+    #471ca9 -0.99%,
+    #5736a3 54.28%,
+    #4b2a99 78.99%
+  );
+  border-radius: 20px;
+  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+
+  @media screen and (min-width: 380px) {
+    padding-top: 284px;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 26px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: calc((100% - 76px) / 3);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.bg_logo {
+  position: absolute;
+  width: 76px;
+  height: 22px;
+  top: 20px;
+  left: 20px;
+}
+.bg_dialog {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+
+  & img {
+    width: 248px;
+    margin: 0 auto;
+    @media screen and (min-width: 380px) {
+      width: 308px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.bg_bar {
+  position: absolute;
+  top: 46%;
+  transform: translateY(-46%);
+  width: 100%;
+
+  & img {
+    width: 100%;
+    height: 20px;
+  }
+}
+.bg_ring {
+  position: absolute;
+  top: 46%;
+  transform: translateY(-46%);
+  & img {
+    width: 80px;
+  }
+}
+
+.avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 45.5%;
+  transform: translateY(-45.5%);
+}
+
+.tweets {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #ebd8ff;
+  margin-top: 26px;
+}
+
+.followers {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #ebd8ff;
+  margin-top: 16px;
+}
+
+.button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  color: #373737;
+  background-color: #ebd8ff;
+  box-shadow: 0px 3.4px 3.4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  width: 196px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-top: 26px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: #5cd3a8;
+    border-color: transparent;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  }
+}
