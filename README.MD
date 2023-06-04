@@ -48,7 +48,7 @@ Example: '@/components/Counter/Counter';
 | npm test      | Run tests                          |
 
 
-### Backend (mockapi)
+### Backend(mockapi)
 
  Cards sorted(b-a) by tweets at:
 ```
