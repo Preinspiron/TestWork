@@ -13,7 +13,7 @@ npx degit emre-cil/viterjs-template my-app
 ```
 
 ```
-cd my-app
+cd my-app1
 ```
 
 #### Install Dependencies
