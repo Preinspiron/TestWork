@@ -18,7 +18,7 @@ export default defineConfig({
     },
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".scss", ".css"],
   },
-  base: "/https://preinspiron.github.io/TestWork/",
+  base: "/TestWork/",
   // build: {
   //   rollupOptions: {
   //     input: {
