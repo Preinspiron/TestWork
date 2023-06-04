@@ -1,21 +1,21 @@
-import { useState } from "react";
-import s from "./Tweet.module.scss";
+import { useState } from 'react';
+import s from './Tweet.module.scss';
 
-import PropTypes from "prop-types";
-import logo from "../../images/Vector.png";
-import dialog from "../../images/question.png";
-import ring from "../../images/borderRing.png";
-import bar from "../../images/bar.png";
-import { usePutUserMutation } from "@/api/store";
-import { useDispatch, useSelector } from "react-redux";
-import { setFollow, removeFollow } from "@/api/slice";
+import PropTypes from 'prop-types';
+import logo from '../../images/Vector.png';
+import dialog from '../../images/question.png';
+import ring from '../../images/borderRing.png';
+import bar from '../../images/bar.png';
+import { usePutUserMutation } from '@/api/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFollow, removeFollow } from '@/api/slice';
 
 const format = (value) => {
-  const form = new Intl.NumberFormat("en", {
-    style: "decimal",
+  const form = new Intl.NumberFormat('en', {
+    style: 'decimal',
 
     // minimumFractionDigits: 2,
-    useGrouping: "false",
+    useGrouping: 'false',
   }).format(value);
   // .replace(" ", ",");
   // form.substring(0, 1) + " " + form.substring(1);
@@ -45,7 +45,7 @@ const Tweet = ({
   };
 
   const buttonStyle = {
-    backgroundColor: checker ? "#5CD3A8" : "#EBD8FF",
+    backgroundColor: checker ? '#5CD3A8' : '#EBD8FF',
   };
 
   // притянуть селектор, который проверяет флаг из ектив и передает по условию класс в кнопку ниже
@@ -73,7 +73,7 @@ const Tweet = ({
         onClick={() => handleButtonClick(id, followers)}
         style={buttonStyle}
       >
-        {isFollowing ? "FOLLOWING" : "FOLLOW"}
+        {isFollowing ? 'FOLLOWING' : 'FOLLOW'}
       </button>
     </li>
   );

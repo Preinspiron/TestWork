@@ -1,14 +1,14 @@
 module.exports = {
   env: { browser: true, es2020: true },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
@@ -16,18 +16,18 @@ module.exports = {
   settings: {
     react: {
       // Tells eslint-plugin-react to automatically detect the version of React to use.
-      version: 'detect',
+      version: "detect",
     },
     // Tells eslint how to resolve imports
-    'import/resolver': {
+    "import/resolver": {
       node: {
-        paths: ['src'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx' , '.scss'],
+        paths: ["src"],
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".scss"],
       },
     },
   },
-  plugins: ['react-refresh'],
+  plugins: ["react-refresh"],
   rules: {
-    'react-refresh/only-export-components': 'warn',
+    "react-refresh/only-export-components": "warn",
   },
-}
+};

@@ -1,7 +1,7 @@
-import { Outlet, Link } from "react-router-dom";
-import Button from "@mui/material/Button";
-import s from "./Layout.module.scss";
-import { Container } from "@mui/material";
+import { Outlet, Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import s from './Layout.module.scss';
+import { Container } from '@mui/material';
 const Layout = () => {
   return (
     <>

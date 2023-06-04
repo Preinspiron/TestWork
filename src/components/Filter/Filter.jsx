@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Select from "react-select";
-import PropTypes from "prop-types";
-import { filterOptions } from "./options";
+import Select from 'react-select';
+import PropTypes from 'prop-types';
+import { filterOptions } from './options';
 // import { useState, useEffect } from "react";
 // import { useSearchParams, useParams } from "react-router-dom";
-import "./Filter.scss";
+import './Filter.scss';
 
 const Filter = ({ change, urlValue }) => {
   return (

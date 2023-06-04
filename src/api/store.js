@@ -1,12 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
-import api from "./api";
-import { setupListeners } from "@reduxjs/toolkit/query";
-import followSlice1 from "./slice";
-import storage from "redux-persist/lib/storage";
-import { persistReducer, persistStore } from "redux-persist";
+import { configureStore } from '@reduxjs/toolkit';
+import api from './api';
+import { setupListeners } from '@reduxjs/toolkit/query';
+import followSlice1 from './slice';
+import storage from 'redux-persist/lib/storage';
+import { persistReducer, persistStore } from 'redux-persist';
 
 const persistConfif = {
-  key: "isFollow",
+  key: 'isFollow',
   storage,
   // whitelist: ['sid', 'refreshToken', 'accessToken']
 };

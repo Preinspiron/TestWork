@@ -1,10 +1,10 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Tweets from "../pages/Tweets";
+import { Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home';
+import Tweets from '../pages/Tweets';
 
-import Layout from "../components/Layout";
-import { useGetUsersQuery, usePutUserMutation } from "@/api/store";
-import _404 from "@/pages/_404";
+import Layout from '../components/Layout';
+import { useGetUsersQuery, usePutUserMutation } from '@/api/store';
+import _404 from '@/pages/_404';
 
 function Routing() {
   const { data, isFetching } = useGetUsersQuery();

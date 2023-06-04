@@ -1,9 +1,9 @@
 // import PropTypes from 'prop-types';
-import Tweet from "@/components/Tweet/Tweet";
-import { useState } from "react";
-import s from "./Home.module.scss";
+import Tweet from '@/components/Tweet/Tweet';
+import { useState } from 'react';
+import s from './Home.module.scss';
 
-import { useGetUsersQuery } from "@/api/store";
+import { useGetUsersQuery } from '@/api/store';
 
 const Home = () => {
   const { data = [] } = useGetUsersQuery();

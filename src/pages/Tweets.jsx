@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
-import Tweet from "../components/Tweet/Tweet";
-import Filter from "../components/Filter/Filter";
-import { useGetUsersQuery } from "@/api/store";
-import { useSearchParams, useParams } from "react-router-dom";
-import { Notify } from "notiflix/build/notiflix-notify-aio";
-import s from "../pages/Tweets.module.scss";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from 'react';
+import Tweet from '../components/Tweet/Tweet';
+import Filter from '../components/Filter/Filter';
+import { useGetUsersQuery } from '@/api/store';
+import { useSearchParams, useParams } from 'react-router-dom';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import s from '../pages/Tweets.module.scss';
+import { useSelector } from 'react-redux';
 // import { filterOptions } from "./options";
 
 const Tweets = () => {
@@ -18,7 +18,7 @@ const Tweets = () => {
 
   // useEffect(() => setSearchParams({ filter: 'all' }), []);
   // const name = searchParams.get("filter") ?? "";
-  const filterName = searchParams.get("filter") ?? "all";
+  const filterName = searchParams.get('filter') ?? 'all';
   console.log(filterName);
   useEffect(() => {
     setSearchParams({ filter: filterName });
@@ -31,7 +31,7 @@ const Tweets = () => {
       <Filter change={change} urlValue={filterName} />
 
       <ul className={s.tweets_list}>
-        {filterName === "followings" &&
+        {filterName === 'followings' &&
           data
             .filter((user) => idies.includes(user.id))
             .map((user) => (
@@ -43,13 +43,13 @@ const Tweets = () => {
                 tweets={user.tweets}
               />
             ))}
-        {filterName === "followings" &&
+        {filterName === 'followings' &&
           Notify.info(
             `You have a ${
               data.filter((user) => idies.includes(user.id)).length
-            } followings`
+            } followings`,
           )}
-        {filterName === "follow" &&
+        {filterName === 'follow' &&
           data
             .filter((user) => !idies.includes(user.id))
             .map((user) => (
@@ -61,13 +61,13 @@ const Tweets = () => {
                 tweets={user.tweets}
               />
             ))}
-        {filterName === "follow" &&
+        {filterName === 'follow' &&
           Notify.info(
             `You have a ${
               data.filter((user) => !idies.includes(user.id)).length
-            } tweets to follow`
+            } tweets to follow`,
           )}
-        {filterName === "all" &&
+        {filterName === 'all' &&
           data.map((user) => (
             <Tweet
               key={user.id}
@@ -77,7 +77,7 @@ const Tweets = () => {
               tweets={user.tweets}
             />
           ))}
-        {filterName === "all" &&
+        {filterName === 'all' &&
           Notify.info(`You have a ${data.length} tweets`)}
       </ul>
     </div>
