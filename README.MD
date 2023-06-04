@@ -58,11 +58,7 @@ Example: '@/components/Counter/Counter';
 https://6465e051228bd07b355516e4.mockapi.io
 ```
 
-### Contacts
 
-```
-preinspiron@gmail.com 
-```
 
 ### CSR for GitHub was resolved by this [issui](https://github.com/rafgraph/spa-github-pages)
 
@@ -71,3 +67,20 @@ preinspiron@gmail.com
 
 - Actions
 - GH-pagaes (npm run deploy)
+
+### Contacts
+
+```
+preinspiron@gmail.com 
+```
+
+<div align="center">
+<a href="https://github.com/Preinspiron" target="_blank">
+<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.linkedin.com/in/volodymyr-borysenko-7b86a683" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+<a href="https://t.me/mrborys" target="_blank">
+<img src=https://img.shields.io/badge/-telegram-blue?&style=for-the-badge&logo=instagram&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>
+</div>
