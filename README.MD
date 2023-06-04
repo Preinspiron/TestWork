@@ -3,6 +3,9 @@
 Extra added:  React +Redux +Route +Mui +RTQ Query +ESLint +Prettier +React-select +CSR +HMR +PropTypes + Sass +Styled
 
 
+### [Figma link to template](https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?node-id=0-1&t=fKfPK1hQF3isHhAC-0)
+
+[![H4fUT8u.png](https://iili.io/H4fUT8u.png)](https://freeimage.host/ru)
 
 ### Getting Started
 
