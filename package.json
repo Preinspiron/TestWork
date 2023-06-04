@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  // "homepage": "https://preinspiron.github.io/TestWork/",
-  "scripts": {
+    "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "vite --open",
