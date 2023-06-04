@@ -18,7 +18,7 @@ export default defineConfig({
     },
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".scss", ".css"],
   },
-  base: "https://preinspiron.github.io/TestWork/",
+  base: "./",
   // build: {
   //   rollupOptions: {
   //     input: {
@@ -28,6 +28,6 @@ export default defineConfig({
   //   },
   // },
   build: {
-    sourcemap: true,
+    sourcemap: false,
   },
 });
