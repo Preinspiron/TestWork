@@ -69,11 +69,6 @@ https://6465e051228bd07b355516e4.mockapi.io
 - GH-pagaes (npm run deploy)
 
 ### Contacts
-
-```
-preinspiron@gmail.com 
-```
-
 <div align="center">
 <a href="https://github.com/Preinspiron" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
@@ -84,3 +79,9 @@ preinspiron@gmail.com
 <img src=https://img.shields.io/badge/-telegram-blue?&style=for-the-badge&logo=instagram&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>
 </div>
+```
+preinspiron@gmail.com
+```
+```
+https:/t.me/mrborys
+```
