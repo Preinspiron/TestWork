@@ -6,10 +6,11 @@ import logo from "../../images/Vector.png";
 import dialog from "../../images/question.png";
 import ring from "../../images/borderRing.png";
 import bar from "../../images/bar.png";
-import { usePutUserMutation } from "@/api/store";
+import { usePutUserMutation, useGetUsersQuery } from "@/api/store";
 import { useDispatch, useSelector } from "react-redux";
 import { setFollow, removeFollow } from "@/api/slice";
 import boy from "@/images/boy.png";
+import ReactiveButton from "reactive-button";
 
 const format = (value) => {
   const form = new Intl.NumberFormat("en", {
@@ -28,27 +29,31 @@ const Tweet = ({
   avatar = null,
   followers = null,
   tweets = null,
-  isFetching,
+  // isFetching,
 }) => {
+  const [state, setState] = useState("idle");
   const selectFollowings = useSelector((state) => state.followers.follows);
   const checker = selectFollowings.some((item) => item?.id === id);
   const [isFollowing, setIsFollowing] = useState(checker);
   const [putUser, { isSuccess, isLoading }] = usePutUserMutation();
+  const { data = [], isFetching } = useGetUsersQuery();
   const dispatch = useDispatch();
 
-  const handleButtonClick = (id, followers, e) => {
+  const handleButtonClick = async (id, followers) => {
     // isSuccess ? (e.target.disable = true) : '';
-    e.target.disabled = false;
+    // e.target.disabled = false;
     // console.log(e.target);
     !isFollowing && dispatch(setFollow(id));
     isFollowing && dispatch(removeFollow(id));
+
     putUser({
       id,
       followers: isFollowing ? followers - 1 : followers + 1,
-    }).unwrap();
+    })
+      .unwrap()
+      .then(() => setState("loading"));
+
     setIsFollowing(!isFollowing);
-    // console.log(isSuccess);
-    console.log(isLoading);
   };
 
   const buttonStyle = {
@@ -70,12 +75,7 @@ const Tweet = ({
       <div className={s.bg_ring}>
         <img src={ring} alt="background ring" />
       </div>
-      <img
-        loading="lazy"
-        src={isFetching ? boy : avatar}
-        alt="avatar"
-        className={s.avatar}
-      />
+      <img loading="lazy" src={avatar} alt="avatar" className={s.avatar} />
       <p className={s.tweets}>{format(tweets)} Tweets</p>
       <p className={s.followers}>{format(followers)} Followers</p>
       <button
@@ -109,6 +109,30 @@ const Tweet = ({
           />
         )}
       </button>
+      {/* <ReactiveButton
+        buttonState={state}
+        onClick={(e) => handleButtonClick(id, followers, e)}
+        color={"primary"}
+        idleText={"FOLLOW"}
+        loadingText={"Loading..."}
+        successText={"FOLLOWING"}
+        type={"button"}
+        className={"class1 class2"}
+        style={{
+          borderRadius: "5px",
+        }}
+        outline={false}
+        shadow={false}
+        rounded={false}
+        size={"normal"}
+        block={false}
+        messageDuration={2000}
+        disabled={false}
+        buttonRef={null}
+        width={null}
+        height={null}
+        animation={true}
+      /> */}
     </li>
   );
 };
