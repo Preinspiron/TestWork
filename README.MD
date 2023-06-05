@@ -62,12 +62,22 @@ https://6465e051228bd07b355516e4.mockapi.io
 
 ### CSR for GitHub was resolved by this [issui](https://github.com/rafgraph/spa-github-pages)
 
+### Routing in SPA
+* The routes have main resourse that can be reached by '/' route
+* The tweets rout is avaible by '/tweets'
+* if  put the wrong path you will get 404 error page-route
+* Also url params is available it /tweets route ( ?filter=all by default)
+  
+### Filter at the /tweets route:
+* was made by react-select
 
 ### Dedploy 
 
 - Actions
 - GH-pagaes (npm run deploy)
 
+### Vite config:
+* use '@/' aliases for absolute paths
 ### Contacts
 <div align="center">
 <a href="https://github.com/Preinspiron" target="_blank">
