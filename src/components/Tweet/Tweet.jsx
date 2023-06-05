@@ -1,6 +1,6 @@
 import { useState } from "react";
 import s from "./Tweet.module.scss";
-import { Dna, FallingLines, ThreeDots } from "react-loader-spinner";
+import { ThreeDots } from "react-loader-spinner";
 import PropTypes from "prop-types";
 import logo from "../../images/Vector.png";
 import dialog from "../../images/question.png";
@@ -9,8 +9,6 @@ import bar from "../../images/bar.png";
 import { usePutUserMutation, useGetUsersQuery } from "@/api/store";
 import { useDispatch, useSelector } from "react-redux";
 import { setFollow, removeFollow } from "@/api/slice";
-import boy from "@/images/boy.png";
-import ReactiveButton from "reactive-button";
 
 const format = (value) => {
   const form = new Intl.NumberFormat("en", {
@@ -109,30 +107,6 @@ const Tweet = ({
           />
         )}
       </button>
-      {/* <ReactiveButton
-        buttonState={state}
-        onClick={(e) => handleButtonClick(id, followers, e)}
-        color={"primary"}
-        idleText={"FOLLOW"}
-        loadingText={"Loading..."}
-        successText={"FOLLOWING"}
-        type={"button"}
-        className={"class1 class2"}
-        style={{
-          borderRadius: "5px",
-        }}
-        outline={false}
-        shadow={false}
-        rounded={false}
-        size={"normal"}
-        block={false}
-        messageDuration={2000}
-        disabled={false}
-        buttonRef={null}
-        width={null}
-        height={null}
-        animation={true}
-      /> */}
     </li>
   );
 };
