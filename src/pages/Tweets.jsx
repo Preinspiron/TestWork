@@ -10,6 +10,7 @@ import { Notify } from "notiflix/build/notiflix-notify-aio";
 import s from "../pages/Tweets.module.scss";
 import { useSelector } from "react-redux";
 // import { filterOptions } from "./options";
+import ScrollToTop from "react-scroll-to-top";
 
 const Tweets = () => {
   const { data = [], isFetching } = useGetUsersQuery();
@@ -70,6 +71,14 @@ const Tweets = () => {
             />
           ))}
       </ul>
+
+      <ScrollToTop
+        smooth
+        style={{
+          marginTop: "100px",
+          // marginBottom: "100px",
+        }}
+      />
     </div>
   );
 };

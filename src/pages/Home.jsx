@@ -2,6 +2,7 @@
 import Tweet from "@/components/Tweet/Tweet";
 import { useState } from "react";
 import s from "./Home.module.scss";
+import ScrollToTop from "react-scroll-to-top";
 
 import { useGetUsersQuery } from "@/api/store";
 
@@ -27,6 +28,13 @@ const Home = () => {
           Load More
         </button>
       )}
+      <ScrollToTop
+        smooth
+        style={{
+          marginTop: "100px",
+          // marginBottom: "100px",
+        }}
+      />
     </div>
   );
 };
